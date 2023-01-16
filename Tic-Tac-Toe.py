@@ -54,7 +54,7 @@
 
         
 board = [" "," "," "," "," "," "," "," "," "]  
-
+#defini le plateau du jeu
 def afficher_plateau():
     print(board[0]+" | "+ board[1] + "|" + board[2])
     print("---------")
@@ -62,7 +62,7 @@ def afficher_plateau():
     print("---------")
     print(board[6]+" | "+ board[7] + "|" + board[8])
     print("---------")
-    
+#verifier les coups gagnants  
 def check_win():
     if (board[0]== board[1]==board[2] and board[0] != " ") or \
         (board[3]== board[4]==board[5] and board[3] != " ") or \
@@ -75,7 +75,7 @@ def check_win():
         return True
     else :
         return False
-
+# jeu
 player = "X"
 game_over = False
 while not game_over :
@@ -94,7 +94,7 @@ while not game_over :
             game_over = True
         else :
             if player =="X":
-                player = "O"
+                player ="O"
             else:
                 player = "X"
 else:
